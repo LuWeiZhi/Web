@@ -1,0 +1,25 @@
+h1{
+	text-align: center;
+	color: #70152c;
+}
+p{
+	text-align: center;
+}
+table{ 
+	width: 600px;
+}
+.A{
+	background: #70152c; 
+	color: white;
+	margin-left: 10px;
+	text-align: center;
+}
+#B{
+	text-align: left;
+}
+.C{
+	text-align: right;
+}
+.D{
+	background: #ffffcc;
+}

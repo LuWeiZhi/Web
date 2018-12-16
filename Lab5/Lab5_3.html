@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab5_3</title>
+</head>
+<body>
+	<button onclick="myFunction()" id="button">Click Me</button>
+	<p id="demo"></p>
+	<script>
+		
+		var flag=1;
+		function myFunction(){
+				if(flag==0)
+				{	
+						document.getElementById("button").innerHTML="Hello World";
+						document.getElementById("demo").innerHTML="";
+						flag=1;
+					}
+				else	
+					{
+						document.getElementById("button").innerHTML="Click Me";
+						document.getElementById("demo").innerHTML="Hello World";
+						flag=0;
+					}
+		}
+	</script>
+	
+</body>
+</html>

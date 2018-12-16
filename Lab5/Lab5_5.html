@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab5_5</title>
+	<style type="text/css">
+		.btn{
+			width: 55px;
+			height: 30px;
+		}
+		.b{
+			margin: 5px 80px 10px 110px
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="JSQ.js"></script>
+
+	<div style="background-color:#00FFFF ; width: 550px; " align="center">
+		<br>
+		<h1 align="center">Simple Calculator using JS</h1>
+		
+		<hr> 
+		<table align="center">
+			<tr>
+				<td style="text-align: right;"><label>Enter 1st value:</label></td><td><input type="text" onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')"/ id="num1"></td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right;"><label>Enter 2nd value:</label></td><td><input type="text" onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')"/ id="num2"></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: right;"><label>Result:</label></td><td></label><input type="text" name="" id="result" readonly='readonly'></td>
+			</tr>
+		</table>
+
+		<div  class="b">
+			<button class="btn" onclick="jia();" value="+">+</button> 
+			<button class="btn" onclick="jian()" value="-">-</button> 
+			<button class="btn" onclick="cheng()" value="*">*</button> 
+			<button class="btn" onclick="chu()" value="/">/</button>
+			<button class="btn" onclick="clears()">C</button>
+		</div>
+		
+		
+		<hr>
+		<br>
+		
+	</div>
+
+	
+
+
+
+	
+	
+</body>
+</html>

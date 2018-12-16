@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单计算器</title>
+	<style type="text/css">
+		.btn{
+			width: 100px;
+			height: 80px;
+			background-color: lightblue;
+			font-size: 40px;
+		}
+		.btn2{
+			width: 100px;
+			height: 80px;
+			background-color: lightgreen;
+			font-size: 40px;
+		}
+		#txt{
+			height: 60px;
+			width: 410px;
+			font-size: 40px;
+		}
+		.C{
+			width: 100px;
+			height: 80px;
+			font-size: 40px;
+		}
+		
+	</style>
+	<script type="text/javascript" >
+
+		function add(obj)
+			{
+				if (document.getElementById("txt").getAttribute("readOnly") != null)
+					return;
+				document.getElementById("txt").value+=obj.value;
+			}
+		function results()
+			{	
+
+				var obj=document.getElementById("txt").value;
+				a=eval(obj);
+				a=Math.round(a* Math.pow(10, 8)) / Math.pow(10, 8);
+				document.getElementById("txt").value+="="+a;
+				document.getElementById("txt").setAttribute("readOnly", 'true');
+			}
+		function clears()
+			{
+				document.getElementById("txt").value="";
+				document.getElementById("txt").removeAttribute("readOnly");
+			}
+			document.onkeydown = function(e)
+			{
+    		if((e||event).keyCode==13)
+        		results();
+			};
+	</script>
+</head>
+<body style="background-color: #EB7347">
+	
+<h1 align="center">简单计算器</h1>
+<table align="center" >
+<tr><td colspan="4"><input type="text" id="txt" onkeyup="this.value=this.value.replace(/[^\-+*/()=?\d.]/g,'')"></td></tr>
+<tr>
+<td><input type="button" onclick="add(this)" class="btn" value="1" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="2" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="3" ></td>
+<td><input type="button" onclick="add(this)" class="btn2" value="+" ></td>
+</tr>
+<tr>
+<td><input type="button" onclick="add(this)" class="btn" value="4" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="5" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="6" ></td>
+<td><input type="button" onclick="add(this)" class="btn2" value="-" ></td>
+</tr>
+<tr>
+<td><input type="button" onclick="add(this)" class="btn" value="7" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="8" ></td>
+<td><input type="button" onclick="add(this)" class="btn" value="9" ></td>
+<td><input type="button" onclick="add(this)" class="btn2" value="*" ></td>
+</tr>
+<tr>
+<td><input type="button" onclick="clears()" class="C"  value="C" ></td>
+<td><input type="button" onclick="add(this)" class="btn"value="0" ></td>
+<td><input type="button" onclick="results()" class="btn" value="=" style="background-color: #84AF9B"></td>
+<td><input type="button" onclick="add(this)" class="btn2" value="/" ></td>
+</tr>
+
+</table>
+
+</body>
+</html>

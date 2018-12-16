@@ -1,0 +1,19 @@
+caption{ 
+	background: #99DD00; 
+	border-style: solid;
+	 border:1px solid black;
+	font-weight: bold;
+	color: white;
+}
+table{ 
+	background-color:#CCFF99;
+	width: 600px;
+}
+.A{ 
+	background-color:#EEFFBB;
+}
+table{ 
+	border-collapse:collapse;
+} 
+table td{ border:1px solid black;} 
+

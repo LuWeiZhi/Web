@@ -1,0 +1,14 @@
+table{
+	border-style: 2px solid green;
+	border-collapse: collapse;
+	width: 100%;
+	}
+th{
+	border-style: 2px solid green;
+	padding: 15px;
+	background-color: lightblue;
+	}
+td{
+	border-style: 2px solid green;
+	text-align: right;
+    }

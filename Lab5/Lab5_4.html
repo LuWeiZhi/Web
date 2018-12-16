@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab5_4</title>
+</head>
+<body>
+	<div id="D">
+	<span  onmouseover="f1();" id="S" >Kiss me please!</span>
+	</div>
+
+
+
+		<script>
+			function f1(){
+			var para=document.createElement("marquee");
+			para.style.color='blue';
+			var node=document.createTextNode("Kiss me please!");
+			para.appendChild(node);
+
+			var parent=document.getElementById("D");
+			var child=document.getElementById("S");
+			parent.replaceChild(para,child);
+		}
+		</script>
+
+	
+</body>
+</html>
